@@ -1,0 +1,18 @@
+{
+  "project": "FamilyOS - Pour toutes les familles du monde - Propri\u00e9t\u00e9 prot\u00e9g\u00e9e",
+  "version": "V10 Final Commercial - 44 modules",
+  "generated_at": "2026-09-05T22:46:10.358629Z",
+  "owner": "[Votre Nom / Soci\u00e9t\u00e9] - Tous droits r\u00e9serv\u00e9s",
+  "global_sha256": "TO_BE_GENERATED_BY_script_generate-proof.js",
+  "proof_methods": {
+    "opentimestamps": "ots stamp familyos-starter-v10-final-commercial.zip -> Bitcoin blockchain",
+    "inpi": "https://www.inpi.fr e-Soleau 15\u20ac - 5 ans",
+    "oapi": "OAPI 17 pays Afrique francophone - Classes 9,42,45",
+    "wipo": "WIPO Madrid 100+ pays - ~1500\u20ac",
+    "git": "git log --reverse --format='%H %ad %s' --date=iso",
+    "supabase": "Dashboard -> Settings -> Project Created At screenshot",
+    "domain": "whois familyos.app -> Creation Date"
+  },
+  "files_count": "Will be filled by script",
+  "note": "Ce fichier + ZIP horodat\u00e9 Bitcoin = preuve ant\u00e9riorit\u00e9 infalsifiable mondiale"
+}

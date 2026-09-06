@@ -1,0 +1,33 @@
+{
+  "name": "familyos",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:types": "supabase gen types typescript --project-id $PROJECT_ID > lib/database.types.ts",
+    "test:security": "vitest run tests/security.test.ts --reporter=verbose",
+    "test:e2e": "playwright test tests/e2e.test.ts",
+    "test:all": "pnpm test:security && pnpm test:e2e"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@supabase/supabase-js": "^2.45.0",
+    "@supabase/ssr": "^0.4.0",
+    "next-intl": "^3.15.0",
+    "zod": "^3.23.8",
+    "lucide-react": "^0.400.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.12.0",
+    "@types/react": "^18.3.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "vitest": "^1.6.0",
+    "@playwright/test": "^1.44.0"
+  }
+}
