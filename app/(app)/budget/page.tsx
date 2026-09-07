@@ -51,7 +51,7 @@ export default async function BudgetPage(){
             const supabase = await (await import('@/lib/supabase/server')).createClient()
             const { data: { user } } = await supabase.auth.getUser()
             const { data: fm } = await supabase.from('family_members').select('family_id').eq('user_id', user!.id).single()
-            await supabase.from('expenses').insert({ family_id: fm.family_id, amount: parseInt(formData.get('amount') as string)*100, category: formData.get('category'), description: formData.get('description') })
+            await supabase.from('expenses').insert({ family_id: fm!.family_id, amount: parseInt(formData.get('amount') as string)*100, category: formData.get('category'), description: formData.get('description') })
           }} className="mt-6 flex gap-2">
             <input name="description" placeholder="Dépense" className="flex-1 border rounded-xl px-3 py-2 text-sm" />
             <input name="amount" type="number" placeholder="$" className="w-24 border rounded-xl px-3 py-2 text-sm" />
