@@ -6,9 +6,9 @@ export default async function BudgetPage(){
   const isAllowed = ['parent_admin','parent_member'].includes(fm!.role)
   if(!isAllowed) return <div className="p-10 text-center bg-amber-50 m-6 rounded-2xl border border-amber-200">Finance N3 protégée - Accès Parent uniquement</div>
   
-  const { data: budgets } = await supabase.from('budgets').select('*').eq('family_id', fm.family_id)
-  const { data: expenses } = await supabase.from('expenses').select('*').eq('family_id', fm.family_id).order('spent_at', {ascending:false}).limit(20)
-  const { data: incomes } = await supabase.from('incomes').select('*').eq('family_id', fm.family_id)
+  const { data: budgets } = await supabase.from('budgets').select('*').eq('family_id', fm!.family_id)
+  const { data: expenses } = await supabase.from('expenses').select('*').eq('family_id', fm!.family_id).order('spent_at', {ascending:false}).limit(20)
+  const { data: incomes } = await supabase.from('incomes').select('*').eq('family_id', fm!.family_id)
   
   const totalBudget = budgets?.reduce((s,b)=>s+b.amount,0)||500000 // $5000 par défaut
   const totalExpenses = expenses?.reduce((s,e)=>s+e.amount,0)||0
