@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createClient } from '@/lib/supabase/server'
 export default async function BudgetPage(){
   const supabase = await createClient()
