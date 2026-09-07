@@ -38,7 +38,7 @@ export default async function BillsPage(){
             const { data: { user } } = await supabase.auth.getUser()
             const { data: fm } = await supabase.from('family_members').select('family_id').eq('user_id', user!.id).single()
             await supabase.from('bills').insert({
-              family_id: fm.family_id,
+              family_id: fm!.family_id,
               provider: formData.get('provider'),
               category: formData.get('category'),
               amount: parseInt(formData.get('amount') as string)*100,
